@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 // import { setToken } from "../../helpers";
 
 export const playerConfig = {
-  videoId: "",
+  videoId: "2aad1269-e37e-4d7b-98d8-f9c4b4dc0958",
   playerId: "my-player",
   apiBaseUrl: window?.app_data?.site?.host || "spinco.staging.web.viewlift.com",
   token: Cookies.get('token') || '',

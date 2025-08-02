@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import SdkComponent from '../components/SdkComponent';
+import VlPlayer from '../components/VlPlayer';
 import Tray from '../components/Tray';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
@@ -10,7 +10,7 @@ const Home = () => {
     <div>
       <Header />
       <main>
-        <SdkComponent />
+        <VlPlayer />
         <Tray />
         <Sidebar />
       </main>

@@ -31,15 +31,9 @@ export const tveAuthConfig = {
     }
   },
   styleInfo: {
-    loginCtaBgColor: "#ffffff",
-    loginCtaTextColor: "#000000",
-    loginCtaBgColor: "grey",
-    loginCtaTextColor: "white",
-    loginCtaBorderWidth: null,
-    loginCtaBorderRadius: null,
+    loginCtaBgColor: "#1c1c1c",
+    loginCtaTextColor: "#ffffff",
     loginCtaWidth: "100%",
-    loginCtaHeight: null,
-    loginCtaVerticalMargin: "10px",
-    loginCtaHorizontalMargin: null,
+    loginCtaBorderRadius: "4px",
   }
 }

@@ -35,5 +35,10 @@ export const tveAuthConfig = {
     loginCtaTextColor: "#ffffff",
     loginCtaWidth: "100%",
     loginCtaBorderRadius: "4px",
-  }
+  },
+  debugConfig: {
+    tveRedirectUrl: "https://spinco.staging.web.viewlift.com/tve-login",
+    tveRedirectAuthQueryParam: "sessionAuthStatus",
+    tveClientDomain: "spinco.staging.web.viewlift.com",
+  },
 }

@@ -1,16 +1,29 @@
 import Cookies from 'js-cookie';
 // import { setToken } from "../../helpers";
 
-export const playerConfig = {
-  videoId: "2aad1269-e37e-4d7b-98d8-f9c4b4dc0958",
+const playerConfig = {
+  videoId: "0a348aee-d35f-4fa4-a24d-2cd37d09db18",
   playerId: "my-player",
-  apiBaseUrl: window?.app_data?.site?.host || "spinco.staging.web.viewlift.com",
+  apiBaseUrl: window?.app_data?.site?.host || "https://spinco.staging.api.viewlift.com/v3",
   token: Cookies.get('token') || '',
   skin: "VL_ONE",
   mute: true,
   autoplay: true,
   // tvProviderLogoUrl: "tvProviderLogoUrl",
 };
+
+export const getPlayerConfig = (videoId) => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramVideoId = urlParams.get('videoID');
+  const finalVideoId = paramVideoId || videoId;
+  
+  if (!finalVideoId) return playerConfig;
+
+  return {
+    ...playerConfig,
+    videoId: finalVideoId
+  }
+}
 
 export const tveAuthConfig = {
   apiConfig: {
@@ -33,6 +46,8 @@ export const tveAuthConfig = {
   styleInfo: {
     loginCtaBgColor: "#1c1c1c",
     loginCtaTextColor: "#ffffff",
+    loginCtaBgColor: "#cac3c3",
+    loginCtaTextColor: "#0f0d0d",
     loginCtaWidth: "100%",
     loginCtaBorderRadius: "4px",
   },

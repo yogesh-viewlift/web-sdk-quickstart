@@ -4,10 +4,10 @@ import VLPlayerCore from "@viewlift/player/esm/index"
 import "@viewlift/player/esm/bundle.css"
 import VLAuthentication from "@viewlift/web-authentication"
 import "@viewlift/web-authentication/dist/assets/style.css"
-import { playerConfig, tveAuthConfig } from "./config"
+import { getPlayerConfig, tveAuthConfig } from "./config"
 import "./style.scss"
 
-const VlPlayer = () => {
+const VlPlayer = ({videoId}) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -17,6 +17,7 @@ const VlPlayer = () => {
 
   const initiateVideoPlayer = async () => {
     setIsLoading(true)
+    const playerConfig = getPlayerConfig(videoId)
     VLPlayerCore()
       .init(playerConfig)
       .then(async (e) => {
@@ -53,7 +54,7 @@ const VlPlayer = () => {
 
   return (
     <div className="vl-player-container">
-      {isLoading && <div className="vl-player-loading-spinner">Loading...</div>}
+      {isLoading && <div className="vl-player-spinner"></div>}
       {error && <div className="vl-player-error-message">Error: {error}</div>}
 
       <div className="vl-player-content">

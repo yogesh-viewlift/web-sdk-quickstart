@@ -1,12 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import Header from '../components/Header';
 import './style.scss';
 
 const NotFound = () => {
   return (
     <div className="notfound-page">
-      {/* <Header /> */}
       <main className="notfound-main">
         <h1 className="notfound-title">404 - Page Not Found</h1>
         <p className="notfound-description">

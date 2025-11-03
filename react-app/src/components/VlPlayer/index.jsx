@@ -18,6 +18,7 @@ const VlPlayer = ({videoId}) => {
   const initiateVideoPlayer = async () => {
     setIsLoading(true)
     const playerConfig = getPlayerConfig(videoId)
+     console.log("playerConfig: ", playerConfig)
     VLPlayerCore()
       .init(playerConfig)
       .then(async (e) => {
@@ -46,6 +47,12 @@ const VlPlayer = ({videoId}) => {
   }, [])
 
   // Initialize player when authenticated
+  // useEffect(() => {
+  //   if (isAuthenticated) {
+  //     initiateVideoPlayer()
+  //   }
+  // }, [isAuthenticated])
+
   useEffect(() => {
     if (isAuthenticated) {
       initiateVideoPlayer()

@@ -9,7 +9,7 @@
   "dependencies": {
     "@viewlift/analytics": "^1.0.73-beta",
     "@viewlift/player": "^2.0.37",
-    "@viewlift/web-authentication": "^3.0.40",
+    "@viewlift/web-authentication": "^3.0.41",
     "html-webpack-plugin": "^5.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

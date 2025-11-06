@@ -60,7 +60,7 @@ export const tveAuthConfig = {
     loginCtaBorderRadius: "4px",
   },
   debugConfig: {
-    tveRedirectUrl: "https://spinco.staging.web.viewlift.com/tveAuthTest",   // provide any whitlisted domain
+    tveRedirectUrl: "https://spinco.staging.web.viewlift.com/tveAuthTest",   // provide any whitlisted domain 
     tveClientDomain: "spinco.staging.web.viewlift.com",
   },
 };
